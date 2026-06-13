@@ -13,3 +13,92 @@ Machine unlearning (MU) addresses privacy risks in pretrained models. The main g
 
 
 ---
+## Environment & Setup
+
+```bash
+conda create -n structguard python=3.9 -y
+conda activate structguard
+
+pip install -r requirements.txt
+```
+
+> **Note**  
+> All experiments were conducted under this environment.  
+> Minor version differences may lead to slightly different results.
+
+---
+
+## Supported Unlearning Algorithms
+
+This repository supports four machine unlearning algorithms. Running the provided training script produces results for all four methods, including our method.
+
+- **Baseline 1:** NegGrad
+- **Baseline 2:** Adv
+- **Baseline 3:** L2UL
+- **Baseline 4:** StructGuard (Ours)
+
+For the detailed formulation and implementation of each unlearning algorithm, please refer to our paper.
+
+---
+
+## Training
+
+Training can be launched by running the provided bash script.
+
+```bash
+bash run_unlearn_cifar10.sh
+bash run_unlearn_cifar100.sh
+```
+
+Each baseline uses its own hyperparameter configuration. Please check the corresponding bash file before running experiments.
+
+> **Note**  
+> Performance may vary depending on the hardware, software environment, and random seed.  
+> If the results differ from the reported values, we recommend tuning `pgd_eps` and `lr`.
+
+---
+
+## Results
+
+After training, the results are automatically saved as follows:
+
+- **Training logs** for all four unlearning algorithms, including StructGuard, are saved under the `logs/` directory.
+- **Unlearned model checkpoints** are saved under the directory specified by `save_dir`.
+
+The saved logs include the training progress and evaluation results for each unlearning method.
+
+---
+
+## Acknowledgements
+
+This repository is built upon the codebase of the following work:
+
+**[Learning to Unlearn: Instance-wise Unlearning for Pre-trained Classifiers](https://arxiv.org/pdf/2301.11578)**
+
+We sincerely thank the authors for releasing their valuable implementation, which provides an important foundation for machine unlearning research.
+
+The description generation process used for anchor construction is based on the following work:
+
+**[Visual Classification via Description from Large Language Models](https://arxiv.org/pdf/2210.07183)**
+
+We deeply appreciate the authors for their inspiring work on language-driven semantic descriptions.
+
+The provided descriptions can also be modified or newly generated. Users are welcome to construct their own descriptions using any preferred language model or description-generation pipeline.
+
+---
+
+## Citation
+
+If you find our work useful for your research, please cite our paper:
+
+```bibtex
+@inproceedings{hong2026stake,
+  title={Stake the Points: Structure-Faithful Instance Unlearning},
+  author={Hong, Kiseong and Shin, JungKyoo and Kim, Eunwoo},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={24524--24533},
+  year={2026}
+}
+```
+
+---
