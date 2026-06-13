@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ---
 
 ## Pretrained Models
-The repository already includes pretrained checkpoints for:
+The repository includes pretrained checkpoints for:
 
 - CIFAR-10
   - ResNet-18
