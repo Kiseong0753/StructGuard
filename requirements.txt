@@ -1,0 +1,14 @@
+
+--find-links https://download.pytorch.org/whl/torch_stable.html
+
+torch==1.7.1+cu110
+torchvision==0.8.2+cu110
+
+advertorch==0.2.3
+git+https://github.com/openai/CLIP.git@a1d071733d7111c9c014f024669f959182114e33
+loguru==0.7.2
+numpy==1.26.4
+openai==0.28.0
+Pillow==10.3.0
+tqdm==4.66.4
+transformers==4.39.3
