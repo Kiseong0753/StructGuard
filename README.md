@@ -28,6 +28,22 @@ pip install -r requirements.txt
 
 ---
 
+## Pretrained Models
+The repository already includes pretrained checkpoints for:
+
+- CIFAR-10
+  - ResNet-18
+  - ResNet-50
+
+- CIFAR-100
+  - ResNet-18
+  - ResNet-50
+
+All checkpoints can be found under:
+pretrained_models/
+
+---
+
 ## Supported Unlearning Algorithms
 
 This repository supports four machine unlearning algorithms. Running the provided training script produces results for all four methods, including our method.
