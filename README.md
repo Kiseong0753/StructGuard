@@ -87,13 +87,7 @@ The saved logs include the training progress and evaluation results for each unl
 
 ## Acknowledgements
 
-This repository is built upon the codebase of the following work:
-**[Learning to Unlearn: Instance-wise Unlearning for Pre-trained Classifiers](https://arxiv.org/pdf/2301.11578)**.
-We gratefully acknowledge the authors for making their implementation publicly available.
-
-The description generation process used for anchor construction is based on the following work:
-**[Visual Classification via Description from Large Language Models](https://arxiv.org/pdf/2210.07183)**.
-We thank the authors for their inspiring work on language-driven semantic descriptions.
+This repository is built upon the codebase of **[Learning to Unlearn: Instance-wise Unlearning for Pre-trained Classifiers](https://arxiv.org/pdf/2301.11578)**. The description generation process used for anchor construction is based on **[Visual Classification via Description from Large Language Models](https://arxiv.org/pdf/2210.07183)**. We gratefully acknowledge the authors of both works for their valuable contributions.
 
 The provided descriptions can also be modified or newly generated. Users are welcome to construct their own descriptions using any preferred language model or description-generation pipeline.
 
